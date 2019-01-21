@@ -16,9 +16,10 @@ exports.arraysAnswers = {
   removeWithoutCopy: function(arr, item) {
     for(let i = 0;i<arr.length;i++){
       if(arr[i]===item){
-        arr = arr.splice(arr[i],0)
-      }
+        arr.splice(i,1)
+        i--
     }
+  }
     return arr
   },
 
@@ -47,7 +48,7 @@ exports.arraysAnswers = {
   },
 
   insert: function(arr, item, index) {
-    arr = arr.splice(index,0,item)
+    arr.splice(index,0,item)
     return arr
   },
 
